@@ -1,0 +1,86 @@
+version: '3.8'
+services:
+  app:
+    build: ./docker/php
+    container_name: ss_app
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+      - ./docker/php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+    depends_on:
+      - db
+    networks:
+      - ss-network
+
+  web:
+    image: nginx:1.25-alpine
+    container_name: ss_nginx
+    ports:
+      - "8085:80"
+    volumes:
+      - ./:/var/www/html:ro
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+    networks:
+      - ss-network
+
+  db:
+    image: mysql:8.0
+    container_name: ss_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "${DB_PORT}:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - ss-network
+
+  node:
+    image: node:20-alpine
+    container_name: ss_node
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    command: ['sh','-c','npm install && npm run dev']
+    networks:
+      - ss-network
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: ss_phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_USER: ${DB_USERNAME}        # optional default login
+      PMA_PASSWORD: ${DB_PASSWORD}     # optional default password
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "8086:80"
+    depends_on:
+      - db
+    restart: "always"
+    networks:
+      - ss-network
+
+  mailpit:
+    container_name: ss_mailpit
+    image: axllent/mailpit
+    restart: "unless-stopped"
+    ports:
+      - "2526:1025"
+      - "8027:8025"
+    environment:
+      - TZ=America/New_York
+    networks:
+      - ss-network
+      
+volumes:
+  db_data:
+
+networks:
+  ss-network:
+    driver: bridge

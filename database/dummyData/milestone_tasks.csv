@@ -1,0 +1,179 @@
+id,ss_milestone_categories_id,study_setup_type,completion_type,name,order,is_active,created_at
+1,1,external,manual,Enter Study Name,1,1,2025-12-08 04:18:31
+2,1,external,manual,Enter Phase,2,1,2025-12-08 04:18:31
+3,1,external,manual,Enter Protocol Number,3,1,2025-12-08 04:18:31
+4,1,external,manual,Enter Therapeutic Area,4,1,2025-12-08 04:18:31
+5,1,external,manual,Enter Sponsor Information,5,1,2025-12-08 04:18:31
+6,1,external,manual,Enter CRO Information,6,1,2025-12-08 04:18:31
+7,1,external,manual,Enter IRB Information,7,1,2025-12-08 04:18:31
+8,1,external,manual,Upload Latest Protocol Version,8,1,2025-12-08 04:18:31
+9,2,external,manual,Assign Project Manager,1,1,2025-12-08 04:18:31
+10,2,external,manual,Assign CRA(s),2,1,2025-12-08 04:18:31
+11,2,external,manual,Assign Regulatory Lead,3,1,2025-12-08 04:18:31
+12,2,external,manual,Assign Contract & Budget Lead,4,1,2025-12-08 04:18:31
+13,2,external,manual,Assign Finance Lead,5,1,2025-12-08 04:18:31
+14,2,external,manual,Assign Data Manager,6,1,2025-12-08 04:18:31
+15,2,external,manual,Assign Medical Monitor,7,1,2025-12-08 04:18:31
+16,2,external,manual,Assign Primary CRC,8,1,2025-12-08 04:18:31
+17,2,external,manual,Assign Primary RX,9,1,2025-12-08 04:18:31
+18,3,external,manual,Add Site(s),1,1,2025-12-08 04:18:31
+19,3,external,manual,Add Principal Investigator Information,2,1,2025-12-08 04:18:31
+20,3,external,manual,Add Sub-Investigators,3,1,2025-12-08 04:18:31
+21,3,external,auto,Add Study Coordinator,4,1,2025-12-08 04:18:31
+22,3,external,auto,Add Backup Study Coordinator,5,1,2025-12-08 04:18:31
+23,3,external,auto,Add Site Address & IRB Affiliation,6,1,2025-12-08 04:18:31
+24,4,external,auto,Set up Study Workflow,1,1,2025-12-08 04:18:31
+25,4,internal,auto,Set Enrollment Target,2,1,2025-12-08 04:18:31
+26,4,internal,auto,Approve Study Setup Completion,3,1,2025-12-08 04:18:31
+27,4,internal,auto,Set Enrollment Plan and Pace,4,1,2025-12-08 04:18:31
+28,5,internal,auto,Send the feasibility questionnaire,1,1,2025-12-08 04:18:31
+29,5,internal,auto,Receive questionnaire response,2,1,2025-12-08 04:18:31
+30,5,internal,auto,Conduct a feasibility call,3,1,2025-12-08 04:18:31
+31,5,internal,auto,Review feasibility results,4,1,2025-12-08 04:18:31
+32,5,internal,auto,Upload the feasibility assessment report,5,1,2025-12-08 04:18:31
+33,6,internal,auto,Schedule Site Qualification Visit (SQV),1,1,2025-12-08 04:18:31
+34,6,internal,auto,Conduct SQV,2,1,2025-12-08 04:18:31
+35,6,internal,auto,Assess facility capabilities,3,1,2025-12-08 04:18:31
+36,6,internal,auto,Assess equipment & staffing availability,4,1,2025-12-08 04:18:31
+37,7,internal,auto,Approve the site for selection,1,1,2025-12-08 04:18:31
+38,7,internal,auto,Upload the site approval form,2,1,2025-12-08 04:18:31
+39,7,internal,auto,Add selected site to CTMS,3,1,2025-12-08 04:18:31
+40,7,internal,auto,Notify the site of selection,4,1,2025-12-08 04:18:31
+41,8,internal,auto,Upload IRB/IEC Submission Packet,1,1,2025-12-08 04:25:00
+42,8,internal,auto,Enter IRB/IEC Submission Date,2,1,2025-12-08 04:25:00
+43,8,internal,manual,Upload Local Regulatory,3,1,2025-12-08 04:25:00
+44,8,internal,manual,Regulatory Received Date,4,1,2025-12-08 04:25:00
+45,8,internal,manual,Stipend Received Date,5,1,2025-12-08 04:25:00
+46,8,internal,manual,Location of the Outsourced Procedure,6,1,2025-12-08 04:25:00
+47,8,internal,manual,SSU Checklist,7,1,2025-12-08 04:25:00
+48,9,internal,manual,Track IRB Queries / Clarifications,1,1,2025-12-08 04:25:00
+49,9,internal,manual,Upload Response to Queries,2,1,2025-12-08 04:25:00
+50,9,internal,manual,Upload Fee Receipt (if applicable),3,1,2025-12-08 04:25:00
+51,9,internal,manual,IRB Submission Date,4,1,2025-12-08 04:25:00
+52,9,internal,manual,IBC Submission,5,1,2025-12-08 04:25:00
+53,10,internal,manual,ICF translations IRB submission,1,1,2025-12-08 04:25:00
+54,10,internal,manual,ICF translation IRB Approval,2,1,2025-12-08 04:25:00
+55,10,internal,manual,Questionnaire translation IRB submission,3,1,2025-12-08 04:25:00
+56,10,internal,manual,Questionnaire translation IRB Approval,4,1,2025-12-08 04:25:00
+57,11,internal,manual,Upload IRB Approval Letter,1,1,2025-12-08 04:25:00
+58,11,internal,manual,Enter IRB Approval Date,2,1,2025-12-08 04:25:00
+59,11,internal,manual,Enter IBC Approval Date,3,1,2025-12-08 04:25:00
+60,11,internal,manual,Upload MoH Approval Letter (if applicable),4,1,2025-12-08 04:25:00
+61,11,internal,manual,Enter Approval Expiration Date,5,1,2025-12-08 04:25:00
+62,12,internal,manual,Upload Approved ICF,1,1,2025-12-08 04:25:00
+63,12,internal,manual,Confirm all approved documents are uploaded,2,1,2025-12-08 04:25:00
+64,12,internal,manual,Verify alignment with the latest protocol version,3,1,2025-12-08 04:25:00
+65,13,internal,auto,Upload Draft CTA,1,1,2025-12-08 04:27:01
+66,13,internal,auto,Send CTA to Site,2,1,2025-12-08 04:27:01
+67,13,internal,auto,Review Site Redlines,3,1,2025-12-08 04:27:01
+68,13,internal,auto,Resolve Contract Comments,4,1,2025-12-08 04:27:01
+69,13,internal,auto,Upload Final CTA,5,1,2025-12-08 04:27:01
+70,13,internal,auto,Upload Fully Executed CTA,6,1,2025-12-08 04:27:01
+71,14,internal,auto,Check / Upload PI CV,1,1,2025-12-08 04:27:13
+72,14,internal,auto,Check / Upload PI Medical License,2,1,2025-12-08 04:27:13
+73,14,internal,auto,Check / Upload PI GCP Certificate,3,1,2025-12-08 04:27:13
+74,14,internal,auto,Check / Upload Financial Disclosure Form,4,1,2025-12-08 04:27:13
+75,14,internal,auto,Check / Upload Protocol Signature Page,5,1,2025-12-08 04:27:13
+76,15,internal,auto,Check / Upload Sub-I CV(s),1,1,2025-12-08 04:27:13
+77,15,internal,auto,Check / Upload Sub-I Medical License(s),2,1,2025-12-08 04:27:13
+78,15,internal,auto,Check / Upload GCP Certificates,3,1,2025-12-08 04:27:13
+79,16,internal,auto,Check / Upload Study Coordinator CV,1,1,2025-12-08 04:27:13
+80,16,internal,auto,Check / Upload Study Coordinator Training Records,2,1,2025-12-08 04:27:13
+81,17,internal,auto,"Upload Completed"" 1572,1,1,,0,1,1,1,2025-12-08 04:27:13
+82,17,REG_UPLOAD_IRB_ROSTER,""Upload IRB Roster (if required)",2,1,2025-12-08 04:27:13
+83,17,internal,auto,Upload Site SOP List,3,1,2025-12-08 04:27:13
+84,17,internal,auto,Upload Laboratory Certifications,4,1,2025-12-08 04:27:13
+85,17,internal,auto,Upload Delegation of Authority (if preliminary version exists),5,1,2025-12-08 04:27:13
+86,18,internal,auto,Verify Document Completeness,1,1,2025-12-08 04:27:13
+87,18,internal,auto,Approve Essential Document Packet,2,1,2025-12-08 04:27:13
+88,19,internal,auto,Generate DOA Log Template,1,1,2025-12-08 04:27:13
+89,19,internal,auto,Map Responsibilities to Staff,2,1,2025-12-08 04:27:13
+90,20,internal,auto,Upload Signed DOA Log,1,1,2025-12-08 04:27:13
+91,20,internal,auto,Verify All Signatures,2,1,2025-12-08 04:27:13
+92,20,internal,auto,Approve DOA Completion,3,1,2025-12-08 04:27:13
+93,21,internal,auto,Upload Study Training Plan,1,1,2025-12-08 04:27:13
+94,21,internal,auto,Distribute Training Materials,2,1,2025-12-08 04:27:13
+95,21,internal,auto,Conduct Study Training Session,3,1,2025-12-08 04:27:13
+96,21,internal,auto,Upload Protocol Training Certificates,4,1,2025-12-08 04:27:13
+97,21,internal,auto,Verify Signature,5,1,2025-12-08 04:27:13
+98,22,internal,auto,Upload GCP Certificates for All Staff,1,1,2025-12-08 04:27:13
+99,22,internal,auto,Verify GCP Validity Period,2,1,2025-12-08 04:27:13
+100,23,internal,auto,Provide EDC Training,1,1,2025-12-08 04:27:13
+101,23,internal,auto,Verify EDC Login Activation,2,1,2025-12-08 04:27:13
+102,23,internal,auto,Provide CTMS Training,3,1,2025-12-08 04:27:13
+103,23,internal,auto,Provide IWRS/IRT Training,4,1,2025-12-08 04:27:13
+104,23,internal,auto,Upload System Training Completion Logs,5,1,2025-12-08 04:27:13
+105,24,internal,auto,Upload Site Recruitment Plan,1,1,2025-12-08 04:27:22
+106,24,internal,auto,Upload Pre-screening Workflow,2,1,2025-12-08 04:27:22
+107,24,internal,auto,IRB Approval of Recruitment Materials,3,1,2025-12-08 04:27:22
+108,24,internal,auto,Upload Approved Recruitment Materials,4,1,2025-12-08 04:27:22
+109,24,internal,auto,Assessment Creation Date,5,1,2025-12-08 04:27:22
+110,24,internal,auto,Assessment Training Date,6,1,2025-12-08 04:27:22
+111,24,internal,auto,PS Tool & Hot Sheet,7,1,2025-12-08 04:27:22
+112,25,internal,auto,Confirm Screening Tools Available,1,1,2025-12-08 04:27:22
+113,25,internal,auto,Train Staff on Screening Workflow,2,1,2025-12-08 04:27:22
+114,25,internal,auto,Validate Subject Identification Methods,3,1,2025-12-08 04:27:22
+115,26,internal,auto,Schedule Screen Priority,1,1,2025-12-08 04:27:22
+116,26,internal,auto,Prescreen Completed/xxx,2,1,2025-12-08 04:27:22
+117,26,internal,auto,Plan Discussed,3,1,2025-12-08 04:27:22
+118,27,internal,auto,Upload Pharmacy License,1,1,2025-12-08 04:27:22
+119,27,internal,auto,Complete IP Storage Assessment,2,1,2025-12-08 04:27:22
+120,27,internal,auto,Upload Temperature Monitoring Plan,3,1,2025-12-08 04:27:22
+121,27,internal,auto,Upload Storage Area Qualification Documents,4,1,2025-12-08 04:27:22
+122,27,internal,auto,USIV Date,5,1,2025-12-08 04:27:22
+123,27,internal,auto,IP Status,6,1,2025-12-08 04:27:22
+124,27,internal,auto,Number of Doses,7,1,2025-12-08 04:27:22
+125,27,internal,auto,SSU Checklist,8,1,2025-12-08 04:27:22
+126,28,internal,auto,Conduct IP Handling Training,1,1,2025-12-08 04:27:22
+127,28,internal,auto,Upload IP Training Certificates,2,1,2025-12-08 04:27:22
+128,29,internal,auto,Confirm IP Shipment Sent,1,1,2025-12-08 04:27:22
+129,29,internal,auto,Confirm IP Shipment Received,2,1,2025-12-08 04:27:22
+130,29,internal,auto,Upload IP Accountability Logs,3,1,2025-12-08 04:27:22
+131,30,internal,auto,Approve Pharmacy/IP Readiness,1,1,2025-12-08 04:27:22
+132,31,internal,auto,Upload Lab Certifications (CLIA/CAP),1,1,2025-12-08 04:27:22
+133,31,internal,auto,Upload Normal Ranges,2,1,2025-12-08 04:27:22
+134,31,internal,auto,Upload Lab Manual Acknowledgment,3,1,2025-12-08 04:27:22
+135,31,internal,auto,Validate Sample Handling SOPs,4,1,2025-12-08 04:27:22
+136,31,internal,auto,Portal Access,5,1,2025-12-08 04:27:22
+137,31,internal,auto,Shipping Supplies Received,6,1,2025-12-08 04:27:22
+138,31,internal,auto,Lab Manual Received,7,1,2025-12-08 04:27:22
+139,31,internal,auto,Local Lab,8,1,2025-12-08 04:27:22
+140,31,internal,auto,SSU Checklist,9,1,2025-12-08 04:27:22
+141,32,internal,auto,Confirm Lab Kits Received,1,1,2025-12-08 04:27:22
+142,32,external,auto,Validate Temperature-Controlled Storage,2,1,2025-12-08 04:27:22
+143,32,external,auto,Confirm Courier Setup,3,1,2025-12-08 04:27:22
+144,33,external,auto,Approve Laboratory Readiness,1,1,2025-12-08 04:27:22
+145,34,external,auto,Collect W-9 / Tax Documents,1,1,2025-12-08 04:27:22
+146,34,external,auto,Verify Banking Information,2,1,2025-12-08 04:27:22
+147,34,external,auto,Approve Vendor Setup,3,1,2025-12-08 04:27:22
+148,34,external,auto,Configure Payment Terms,4,1,2025-12-08 04:27:22
+149,34,external,auto,Configure Payment Triggers in CTMS,5,1,2025-12-08 04:27:22
+150,36,external,auto,Schedule SIV,1,1,2025-12-08 04:27:22
+151,36,external,auto,Share Agenda & Training Materials,2,1,2025-12-08 04:27:22
+152,36,external,auto,Conduct Pre-SIV Checks,3,1,2025-12-08 04:27:22
+153,37,external,auto,Conduct SIV (onsite or remote),1,1,2025-12-08 04:27:22
+154,37,external,auto,Upload SIV Report,2,1,2025-12-08 04:27:22
+155,37,external,auto,Capture SIV Attendance,3,1,2025-12-08 04:27:22
+156,38,external,auto,Resolve SIV Action Items,1,1,2025-12-08 04:27:22
+157,38,external,auto,Approve SIV Completion,2,1,2025-12-08 04:27:22
+158,39,external,auto,Regulatory Approval Complete,1,1,2025-12-08 04:27:22
+159,39,external,auto,Contract Signed & Budget Finalized,2,1,2025-12-08 04:27:22
+160,39,external,auto,Essential Documents Complete,3,1,2025-12-08 04:27:22
+161,39,external,auto,DOA Complete,4,1,2025-12-08 04:27:22
+162,39,external,auto,Training Complete,5,1,2025-12-08 04:27:22
+163,39,external,auto,Pharmacy/IP Ready,6,1,2025-12-08 04:27:22
+164,39,external,auto,Lab Ready,7,1,2025-12-08 04:27:22
+165,39,external,auto,System Setup Complete,8,1,2025-12-08 04:27:22
+166,40,external,auto,Resolve SIV Action Items,1,1,2025-12-08 04:33:37
+167,40,external,auto,Approve SIV Completion,2,1,2025-12-08 04:33:37
+168,41,external,auto,Regulatory Approval Complete,1,1,2025-12-08 04:33:37
+169,41,external,auto,Contract Signed & Budget Finalized,2,1,2025-12-08 04:33:37
+170,41,external,auto,Essential Documents Complete,3,1,2025-12-08 04:33:37
+171,41,external,auto,DOA Complete,4,1,2025-12-08 04:33:37
+172,41,external,auto,Training Complete,5,1,2025-12-08 04:33:37
+173,41,external,auto,Pharmacy/IP Ready,6,1,2025-12-08 04:33:37
+174,41,external,auto,Lab Ready,7,1,2025-12-08 04:33:37
+175,41,external,auto,System Setup Complete,8,1,2025-12-08 04:33:37
+176,42,external,auto,Issue Site Activation Letter,1,1,2025-12-08 04:33:37
+177,42,external,auto,Upload Activation Letter,2,1,2025-12-08 04:33:37
+178,42,external,auto,Mark Site as Active in CTMS,3,1,2025-12-08 04:33:37

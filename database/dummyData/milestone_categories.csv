@@ -1,0 +1,43 @@
+id,ss_milestone_id,category_name,description,order,created_at
+1,1,Study Planning,Initial study setup tasks including protocol details and sponsor information.,1,2025-12-08
+2,1,Internal Study Team,Assign study team roles and responsibilities.,2,2025-12-08
+3,1,Sites & PI Setup,Set up site and investigator profile data.,3,2025-12-08
+4,1,Study Configuration,Configure workflow and enrollment settings.,4,2025-12-08
+5,2,Feasibility,"Feasibility questionnaire, responses, calls, and assessment.",1,2025-12-08
+6,2,Site Qualification,"SQV scheduling, visits, facility and staffing assessment.",2,2025-12-08
+7,2,Site Selection,"Final approval, site addition to CTMS, and site notification.",3,2025-12-08
+8,3,Submission Preparation,Activities related to preparing and submitting IRB/IEC regulatory packets.,1,2025-12-08
+9,3,Submission Processing,"Tracking IRB queries, responses, fees, and submissions.",2,2025-12-08
+10,3,Translations,ICF and questionnaire translations and approvals.,3,2025-12-08
+11,3,Approval,Final IRB/IEC/MoH approvals and tracking approval dates.,4,2025-12-08
+12,3,Additional Requirements,Post-approval document uploads and protocol alignment checks.,5,2025-12-08
+13,4,Contract (CTA),"Upload draft and final contracts, send to site, resolve redlines",1,2025-12-08
+14,4,Budget,"Upload budget proposals, review internally, negotiate and approve",2,2025-12-08
+15,4,Financial Setup,"Collect banking info, validate tax docs, configure payments",3,2025-12-08
+16,5,Investigator Documents,"Upload PI CV, license, GCP, disclosure, signature",1,2025-12-08
+17,5,Sub-Investigator Documents,"Upload Sub-I CV, license, and GCP certificates",2,2025-12-08
+18,5,Site Staff Documents,Upload study coordinator CV and training records,3,2025-12-08
+19,5,Site Regulatory Documents,"Upload 1572, IRB roster, SOPs, lab certifications, DOA",4,2025-12-08
+20,5,Completion,Verify document completeness and approve essential document packet,5,2025-12-08
+21,6,DOA Log Preparation,Generate DOA log template and map staff responsibilities,1,2025-12-08
+22,6,Finalization,"Upload signed DOA log, verify signatures, approve completion",2,2025-12-08
+23,7,Study-Specific Training,"Upload training plan, conduct study training session",1,2025-12-08
+24,7,General Training,Upload and verify GCP certificates for all staff,2,2025-12-08
+25,7,System Training,"Provide EDC, CTMS, IWRS/IRT training and upload completion logs",3,2025-12-08
+26,8,Recruitment Planning,Plan and prepare site recruitment and pre-screening activities,1,2025-12-08
+27,8,Operational Readiness,Ensure screening tools and staff are trained and ready,2,2025-12-08
+28,8,Subject Lined Up,Schedule and track subjects for screening and enrollment,3,2025-12-08
+29,9,Pharmacy Setup,"Prepare pharmacy and investigational product (IP) storage, documentation, and assessments",1,2025-12-08
+30,9,Training,Conduct IP handling training and upload training certificates,2,2025-12-08
+31,9,IP Shipment,"Track IP shipment, receipt, and accountability logs",3,2025-12-08
+32,9,Completion,Approve overall Pharmacy/IP readiness,4,2025-12-08
+33,10,Laboratory Verification,"Verify lab certifications, sample handling SOPs, portal access, and other lab readiness items",1,2025-12-08
+34,10,Kit & Courier Setup,"Confirm lab kits received, validate temperature-controlled storage, and courier setup",2,2025-12-08
+35,11,Financial Setup,"Collect tax documents, verify banking info, configure payments, and approve vendor setup",1,2025-12-08
+36,11,Administrative Setup,Upload legal/compliance documents and validate site administration requirements,2,2025-12-08
+37,11,Completion,Approve overall financial and administrative setup,3,2025-12-08
+38,12,Preparation,"Schedule SIV, share agenda & training materials, and conduct pre-SIV checks",1,2025-12-08
+39,12,Execution,"Conduct SIV onsite or remote, upload SIV report, and capture attendance",2,2025-12-08
+40,12,Post-SIV,Resolve action items and approve SIV completion,3,2025-12-08
+41,13,Final Checks,"Ensure all regulatory, contract, documents, training, pharmacy/IP, lab, and system setups are complete",1,2025-12-08
+42,13,Activation,Issue site activation letter and mark site as active in CTMS,2,2025-12-08

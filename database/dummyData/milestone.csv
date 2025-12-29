@@ -1,0 +1,14 @@
+id,name,order,enum_type,is_active,created_at
+1,Study Setup,1,option1,1,2025-12-08 02:26:03
+2,Feasibility & Site Selection,2,option1,1,2025-12-08 02:26:03
+3,Regulatory / Ethics Approvals,3,option1,1,2025-12-08 02:26:03
+4,Contracting & Budget,4,option1,1,2025-12-08 02:26:03
+5,Essential Documents Collection,5,option1,1,2025-12-08 02:26:03
+6,Delegation of Authority (DOA),6,option1,1,2025-12-08 02:26:03
+7,Training (Study-specific & GCP),7,option1,1,2025-12-08 02:26:03
+8,Recruitment Readiness,8,option1,1,2025-12-08 02:26:03
+9,Pharmacy / IP Readiness,9,option1,1,2025-12-08 02:26:03
+10,Laboratory Readiness,10,option1,1,2025-12-08 02:26:03
+11,Financial & Administrative Setup,12,option1,1,2025-12-08 02:26:03
+12,Site Initiation (SIV),13,option1,1,2025-12-08 02:26:03
+13,Final Site Activation,14,option1,1,2025-12-08 02:26:03
