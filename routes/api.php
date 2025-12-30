@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\SsSiteController;
+use App\Http\Controllers\SsStudyController;
+use App\Http\Controllers\SsStudyStaffController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +24,9 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/refresh-token', [AuthController::class, 'refreshToken']);
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/me', fn () => auth()->user());
+    // Route::get('/me', fn () => auth()->user());
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::apiResource('ss-sites', SsSiteController::class);
-});
-
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+    Route::apiResource('ss-studies', SsStudyController::class);
+    Route::apiResource('ss-study-staff', SsStudyStaffController::class);
 });

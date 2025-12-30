@@ -10,8 +10,6 @@ class SsOrganization extends Model
 
     protected $primaryKey = 'id';
 
-    public $timestamps = false; 
-
     protected $fillable = [
         'name',
         'type',

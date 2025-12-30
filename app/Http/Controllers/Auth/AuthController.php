@@ -9,8 +9,10 @@ use App\Http\Resources\SsUserResource;
 use App\Models\SsUser;
 use App\Enums\TokenAbility;
 use App\Http\Requests\LoginRequest;
+use App\Http\Resources\TokenResource;
 use App\Models\SsOrganization;
 use App\Services\AuthService;
+use Doctrine\Common\Lexer\Token;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\PersonalAccessToken;
@@ -43,7 +45,7 @@ class AuthController extends Controller
         $tokenData = $this->authService->issueTokens($user);
 
         return response()->ok(
-            new SsUserResource($tokenData),
+            SsUserResource::make($tokenData),
             'User registered successfully'
         );
     }
@@ -64,7 +66,7 @@ class AuthController extends Controller
         $tokenData = $this->authService->issueTokens($user);
 
         return response()->ok(
-            new SsUserResource($tokenData),
+            SsUserResource::make($tokenData),
             'User logged in successfully'
         );
     }
@@ -80,17 +82,15 @@ class AuthController extends Controller
 
         $token = PersonalAccessToken::findToken($refreshToken);
 
-        if (
-            !$token ||
-            !$token->can(TokenAbility::REFRESH_API->value)
-        ) {
+        if ( !$token || !$token->can(TokenAbility::REFRESH_API->value)) {
+            
             return response()->unauthorized('Invalid refresh token');
         }
 
-        // if ($token->expires_at && $token->expires_at->isPast()) {
-        //     $token->delete();
-        //     return response()->unauthorized('Refresh token expired');
-        // }
+        if ($token->expires_at && $token->expires_at->isPast()) {
+            $token->delete();
+            return response()->unauthorized('Refresh token expired. Please login again.');
+        }
 
         $user = $token->tokenable;
 
@@ -101,14 +101,17 @@ class AuthController extends Controller
         $accessToken = $user->createToken(
             'access_token',
             [TokenAbility::ACCESS_API->value],
-            now()->addMinutes(15)
+            now()->addDay()
         );
 
-        return response()->json([
-            'access_token' => $accessToken->plainTextToken,
-            'expires_at' => $accessToken->accessToken->expires_at,
-            'token_type' => 'Bearer',
-        ]);
+        return response()->ok(
+            TokenResource::make([
+                'access_token' => $accessToken->plainTextToken,
+                'refresh_token' => $refreshToken,
+                'expires_at' => $accessToken->accessToken->expires_at,
+            ]),
+            'Token created successfully'
+        );
     }
 
 
@@ -116,31 +119,6 @@ class AuthController extends Controller
     {
         $request->user()->tokens()->delete();
 
-        return response()->json(['message' => 'Logged out']);
-    }
-
-    public function issueTokens(SsUser $user)
-    {
-
-        $user->tokens()->delete();
-
-        $accessToken = $user->createToken(
-            'access_token',
-            [TokenAbility::ACCESS_API->value],
-            now()->addMinutes(15)
-        );
-
-        $refreshToken = $user->createToken(
-            'refresh_token',
-            [TokenAbility::REFRESH_API->value],
-            now()->addDays(30)
-        );
-        return [
-            'access_token' => $accessToken->plainTextToken,
-            'expires_at' => $accessToken->accessToken->expires_at,
-            'refresh_token' => $refreshToken->plainTextToken,
-            'token_type' => 'Bearer',
-            'user' => $user,
-        ];
+        return response()->ok(['message' => 'Logged out']);
     }
 }
