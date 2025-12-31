@@ -18,7 +18,7 @@ class CreateSsStudyMilestonesTable extends Migration
             $table->unsignedBigInteger('ss_organisation_id');
             $table->unsignedBigInteger('ss_site_id')->nullable();
             $table->unsignedBigInteger('ss_study_id');
-            $table->unsignedBigInteger('ss_user_id')->nullable();
+            $table->unsignedBigInteger('ss_milestone_owner_id')->nullable();
             $table->unsignedBigInteger('ss_milestone_id');
 
             $table->string('name'); 
@@ -40,7 +40,7 @@ class CreateSsStudyMilestonesTable extends Migration
             $table->foreign('ss_organisation_id')->references('id')->on('ss_organizations');
             $table->foreign('ss_site_id')->references('id')->on('ss_sites');
             $table->foreign('ss_study_id')->references('id')->on('ss_studies');
-            $table->foreign('ss_user_id')->references('id')->on('ss_users');
+            $table->foreign('ss_milestone_owner_id')->references('id')->on('ss_users');
             $table->foreign('ss_milestone_id')->references('id')->on('ss_milestones');
 
         });

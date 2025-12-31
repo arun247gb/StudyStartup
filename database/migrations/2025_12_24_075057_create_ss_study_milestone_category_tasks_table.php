@@ -12,9 +12,7 @@ class CreateSsStudyMilestoneCategoryTasksTable extends Migration
             $table->id();
 
             $table->unsignedBigInteger('ss_study_id');
-            $table->unsignedBigInteger('ss_organisation_id')->nullable();
-
-            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('ss_organisation_id')->nullable();;
 
             $table->enum('study_setup_type', ['external', 'internal']);
             $table->enum('completion_type', ['MANUAL', 'AUTO'])->nullable();
@@ -33,8 +31,10 @@ class CreateSsStudyMilestoneCategoryTasksTable extends Migration
             $table->date('actual_start_date')->nullable();
             $table->date('actual_completion_date')->nullable();
 
-            $table->integer('comments_count')->default(0);
             $table->integer('order')->default(0);
+
+            $table->unsignedBigInteger('assigned_to')->nullable()
+            $table->unsignedBigInteger('updated_by')->nullable();
 
             $table->timestamps();
             $table->softDeletes();
@@ -47,6 +47,9 @@ class CreateSsStudyMilestoneCategoryTasksTable extends Migration
                   ->references('id')->on('ss_organizations');
 
             $table->foreign('updated_by', 'fk_updated_by')
+                  ->references('id')->on('ss_users');
+
+            $table->foreign('assigned_to', 'fk_assigned_to')
                   ->references('id')->on('ss_users');
 
             $table->foreign('ss_study_milestone_category_id', 'fk_study_category')

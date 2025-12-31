@@ -17,6 +17,7 @@ class CreateSsSitesTable extends Migration
             $table->id();
 
             $table->unsignedBigInteger('ss_organizations_id')->nullable();
+            $table->unsignedBigInteger('ctms_site_id')->nullable();
 
             $table->string('name', 255)->nullable();
             $table->string('site_number', 255)->nullable();
@@ -36,10 +37,8 @@ class CreateSsSitesTable extends Migration
             $table->softDeletes();
             
             // Foreign key
-            $table->foreign('ss_organizations_id')
-                  ->references('id')
-                  ->on('ss_organizations')
-                  ->onDelete('set null');
+            $table->foreign('ss_organizations_id')->references('id')->on('ss_organizations')->onDelete('set null');
+            $table->foreign('ctms_site_id')->references('id')->on('ss_sites');
         });
     }
 

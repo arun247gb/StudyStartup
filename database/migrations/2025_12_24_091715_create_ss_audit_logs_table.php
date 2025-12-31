@@ -23,7 +23,6 @@ class CreateSsAuditLogsTable extends Migration
             $table->string('causer_type', 255);
             $table->unsignedBigInteger('causer_id');
 
-            $table->tinyInteger('section');
             $table->string('action', 255);
 
             $table->string('description', 255)->nullable();

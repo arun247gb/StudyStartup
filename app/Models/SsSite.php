@@ -10,8 +10,11 @@ class SsSite extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $table = 'ss_sites';
+
     protected $fillable = [
         'ss_organizations_id',
+        'ctms_site_id',
         'name',
         'site_number',
         'address_line1',

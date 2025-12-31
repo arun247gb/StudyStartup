@@ -17,6 +17,7 @@ class CreateSsDepartmentsTable extends Migration
             $table->id();
 
             $table->unsignedBigInteger('ss_organizations_id');
+            $table->unsignedBigInteger('ctms_provider_id')->nullable();
             $table->string('name', 255)->nullable();
             $table->string('description', 255)->nullable();
             $table->boolean('is_active')->default(true);

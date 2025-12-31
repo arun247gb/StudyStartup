@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('ss_milestones', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('milestone_owner_id')->nullable();
             $table->string('name'); 
             $table->integer('order');
             $table->boolean('is_active')->default(true);
-            $table->enum('enum_type', ['option1', 'option2', 'option3'])->nullable(); 
             
             $table->timestamps();
             $table->softDeletes();
+
+            $table->foreign('milestone_owner_id')->references('id')->on('ss_users');
         });
     }
 

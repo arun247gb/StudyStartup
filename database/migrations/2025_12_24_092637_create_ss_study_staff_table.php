@@ -13,14 +13,13 @@ class CreateSsStudyStaffTable extends Migration
      */
     public function up()
     {
-        Schema::create('ss_study_staff', function (Blueprint $table) {
+        Schema::create('ss_study_staffs', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('ss_organizations_id')->nullable();
             $table->unsignedBigInteger('ss_study_id');
             $table->unsignedBigInteger('ss_user_id');
 
-            $table->string('name', 255);
             $table->integer('enum_staff_type_id');
 
             $table->text('description')->nullable();
@@ -44,6 +43,6 @@ class CreateSsStudyStaffTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ss_study_staff');
+        Schema::dropIfExists('ss_study_staffs');
     }
 }

@@ -10,6 +10,8 @@ class SsStudyStaff extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $table = 'ss_study_staffs';
+    
     protected $fillable = [
         'ss_organizations_id',
         'ss_study_id',

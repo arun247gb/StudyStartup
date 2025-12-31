@@ -23,7 +23,6 @@ class CreateSsDocumentsTable extends Migration
             $table->string('original_name', 255);
             $table->string('document_path', 255);
             $table->text('notes');
-            $table->boolean('monitor_view');
 
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();

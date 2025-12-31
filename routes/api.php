@@ -1,10 +1,12 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\SsMilestoneController;
 use App\Http\Controllers\SsSiteController;
 use App\Http\Controllers\SsStudyController;
+use App\Http\Controllers\SsStudyMilestoneCategoryTaskController;
+use App\Http\Controllers\SsStudyMilestoneController;
 use App\Http\Controllers\SsStudyStaffController;
 
 /*
@@ -29,4 +31,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('ss-sites', SsSiteController::class);
     Route::apiResource('ss-studies', SsStudyController::class);
     Route::apiResource('ss-study-staff', SsStudyStaffController::class);
+    Route::get('/get-milestones-template', [SsMilestoneController::class, 'getMilestonesTemplate']);
+    Route::prefix('studies/{studyId}')->group(function () {
+        Route::apiResource('milestones', SsStudyMilestoneController::class);
+        Route::post('assign-tasks', [SsStudyMilestoneCategoryTaskController::class, 'assignTasks']);
+    });
 });
