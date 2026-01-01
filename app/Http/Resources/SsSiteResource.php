@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use PhpParser\ErrorHandler\Collecting;
 
 class SsSiteResource extends JsonResource
 {
@@ -11,10 +12,7 @@ class SsSiteResource extends JsonResource
         return [
             'id'                       => $this->id,
             'organization_id'           => $this->ss_organizations_id,
-            'organization'              => $this->organization ? [
-                'id'   => $this->organization->id,
-                'name' => $this->organization->name,
-            ] : null,
+            'organization'             => $this->organization ? SsOrganizationResource::make($this->organization) : null,
             'name'                     => $this->name,
             'site_number'              => $this->site_number,
             'address_line1'            => $this->address_line1,

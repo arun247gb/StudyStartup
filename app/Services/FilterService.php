@@ -17,19 +17,18 @@ class FilterService
         array $with = [],
         ?array $authUser = null,
         $limit=0,
-        bool $paginate = true
+        bool $paginate = true,
+        ?\Closure $extraQuery = null
     ) {
-        // Use base query if provided, otherwise model query
+    
         $query = $baseQuery 
             ? QueryBuilder::for($baseQuery)
             : QueryBuilder::for($modelName);
 
-        // Apply allowed filters, sorts, and relations
         $query->allowedSorts($allowedSorts)
               ->allowedFilters($allowedFilters)
               ->with($with);
 
-        // Apply public scope if exists
         if (method_exists($modelName, 'scopePublic')) {
             $query->public($authUser);
         }
@@ -38,6 +37,9 @@ class FilterService
             $query->limit($limit);
         }
 
+        if ($extraQuery) {
+            $extraQuery($query); 
+        }
         return $paginate
             ? $query->paginate(Helper::paginationCount())
             : $query->get();

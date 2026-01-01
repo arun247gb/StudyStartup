@@ -24,14 +24,14 @@ class SsStudyStaffController extends Controller
     public function index(Request $request)
     {
         $staffRecords = $this->filterService->filter(
-            tableName: 'ss_study_staff',
+            tableName: 'ss_study_staffs',
             modelName: SsStudyStaff::class,
             allowedSorts: [
-                'ss_study_staff.name',
-                'ss_study_staff.enum_staff_type_id',
+                'ss_study_staffs.name',
+                'ss_study_staffs.enum_staff_type_id',
             ],
             allowedFilters: [
-                AllowedFilter::custom('search_text', new SearchText(), 'ss_study_staff'),
+                AllowedFilter::custom('search_text', new SearchText(), 'ss_study_staffs'),
                 'ss_study_id',
                 'ss_user_id',
                 'enum_staff_type_id',
@@ -78,6 +78,6 @@ class SsStudyStaffController extends Controller
     {
         $ssStudyStaff->delete();
 
-        return response()->ok([], 'Staff removed successfully');
+        return response()->ok(SsStudyStaffResource::make($ssStudyStaff), 'Staff removed successfully');
     }
 }

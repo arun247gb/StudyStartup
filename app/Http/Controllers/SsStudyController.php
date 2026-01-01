@@ -78,6 +78,9 @@ class SsStudyController extends Controller
     {
         $ssStudy->delete();
 
-        return response()->ok(message: 'Study deleted successfully');
+        return response()->ok(
+            SsStudyResource::make($ssStudy),
+            'Study deleted successfully'
+        );
     }
 }

@@ -9,7 +9,7 @@ return [
         ['with-search' => 'organization.name'], 
     ],
 
-    'ss_study_staff' => [
+    'ss_study_staffs' => [
         'name',
         'description',
         ['with-search' => 'user.name'],

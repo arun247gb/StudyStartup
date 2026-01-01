@@ -27,12 +27,6 @@ class SsDepartment extends Model
         'deleted_at'  => 'datetime',
     ];
 
-    /*
-    |--------------------------------------------------------------------------
-    | Relationships
-    |--------------------------------------------------------------------------
-    */
-
     public function organization()
     {
         return $this->belongsTo(
@@ -48,12 +42,6 @@ class SsDepartment extends Model
             'ss_department_id'
         );
     }
-
-    /*
-    |--------------------------------------------------------------------------
-    | Query Scopes (optional)
-    |--------------------------------------------------------------------------
-    */
 
     public function scopeActive($query)
     {

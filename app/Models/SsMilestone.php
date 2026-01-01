@@ -16,6 +16,7 @@ class SsMilestone extends Model
         'name',
         'order',
         'is_active',
+        'milestone_owner_id',
     ];
 
     protected $casts = [

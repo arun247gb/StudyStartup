@@ -26,13 +26,22 @@ class SsStudyRequest extends FormRequest
         return $rules;
     }
 
-
     public function messages(): array
     {
         return [
+            'ss_organizations_id.exists' => 'Selected organization does not exist',
             'ss_site_id.required' => 'Site is required',
             'ss_site_id.exists' => 'Selected site does not exist',
+            'name.required' => 'Study name is required',
+            'name.string' => 'Study name must be a string',
+            'name.max' => 'Study name cannot exceed 255 characters',
+            'protocol_number.required' => 'Protocol number is required',
+            'protocol_number.string' => 'Protocol number must be a string',
+            'protocol_number.max' => 'Protocol number cannot exceed 100 characters',
+            'does_ctms_connected.required' => 'CTMS connection status is required',
+            'does_ctms_connected.boolean' => 'CTMS connection status must be true or false',
+            'planned_activation_date.date' => 'Planned activation date must be a valid date',
+            'description.string' => 'Description must be a string',
         ];
     }
-
 }

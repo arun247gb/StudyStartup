@@ -7,12 +7,8 @@ use App\Models\SsUser;
 
 class AuthService
 {
-    /**
-     * Issue access & refresh tokens for a user
-     */
     public function issueTokens(SsUser $user): array
     {
-        // Revoke all previous tokens
         $user->tokens()->delete();
 
         $accessToken = $user->createToken(

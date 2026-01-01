@@ -25,7 +25,7 @@ class SearchText implements Filter
         // Load columns and relationships from config
         $config = config('search-fields');
 
-        $fields = $config[$tableName] ?? ['name']; // fallback to 'name'
+        $fields = $config[$tableName] ?? ['name']; 
 
         $query->where(function ($q) use ($fields, $tableName, $value) {
             foreach ($fields as $field) {
