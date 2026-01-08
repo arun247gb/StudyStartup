@@ -33,7 +33,7 @@ services:
       MYSQL_USER: ${DB_USERNAME}
       MYSQL_PASSWORD: ${DB_PASSWORD}
     ports:
-      - "${DB_PORT}:3306"
+      - "${HOST_PORT:-3307}:3306"
     volumes:
       - db_data:/var/lib/mysql
     networks:
@@ -82,4 +82,5 @@ volumes:
 
 networks:
   ss-network:
-    driver: bridge
+    external: true
+    name: sso-network

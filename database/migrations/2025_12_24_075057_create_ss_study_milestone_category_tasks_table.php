@@ -33,7 +33,7 @@ class CreateSsStudyMilestoneCategoryTasksTable extends Migration
 
             $table->integer('order')->default(0);
 
-            $table->unsignedBigInteger('assigned_to')->nullable()
+            $table->unsignedBigInteger('assigned_to')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();
 
             $table->timestamps();

@@ -6,12 +6,15 @@ use App\Http\Controllers\SsDepartmentController;
 use App\Http\Controllers\SsMilestoneController;
 use App\Http\Controllers\SsMilestoneCategoryController;
 use App\Http\Controllers\SsMilestoneCategoryTaskController;
+use App\Http\Controllers\SsoController;
 use App\Http\Controllers\SsSiteController;
 use App\Http\Controllers\SsStudyController;
 use App\Http\Controllers\SsStudyMilestoneCategoryController;
 use App\Http\Controllers\SsStudyMilestoneCategoryTaskController;
 use App\Http\Controllers\SsStudyMilestoneController;
 use App\Http\Controllers\SsStudyStaffController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +31,7 @@ use App\Http\Controllers\SsStudyStaffController;
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/refresh-token', [AuthController::class, 'refreshToken']);
+Route::get('/sso/callback', [SsoController::class, 'callback']);
 
 Route::middleware('auth:sanctum')->group(function () {
     // Route::get('/me', fn () => auth()->user());
