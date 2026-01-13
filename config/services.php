@@ -37,4 +37,8 @@ return [
         'token_url' => env('SSO_TOKEN_URL'),
     ],
 
+    'frontend' => [
+        'dashboard_url' => env('FRONTEND_URL') . '/dashboard',
+    ],
+
 ];

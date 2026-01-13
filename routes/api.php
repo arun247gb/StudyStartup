@@ -31,10 +31,13 @@ use Illuminate\Support\Facades\Http;
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/refresh-token', [AuthController::class, 'refreshToken']);
-Route::get('/sso/callback', [SsoController::class, 'callback']);
+Route::get('/sso/callback', [SsoController::class, 'callback'])->middleware('web');
+Route::get('/sso/verify', [SsoController::class, 'verify'])->middleware('web');
+Route::get('/sso/authorization', [SsoController::class, 'authorization']);
 
 Route::middleware('auth:sanctum')->group(function () {
-    // Route::get('/me', fn () => auth()->user());
+    Route::get('/user', fn () => auth()->user());
+
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::apiResource('ss-sites', SsSiteController::class);
     Route::apiResource('ss-studies', SsStudyController::class);
